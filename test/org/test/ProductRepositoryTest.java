@@ -7,7 +7,6 @@ import org.dev.ProductRepository;
 import org.junit.Test;
 
 public class ProductRepositoryTest {
-
 	
 	@Test
 	public void testAddOneProduct() {

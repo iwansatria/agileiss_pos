@@ -73,20 +73,26 @@
     </target>
     <target name="AllTests">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
+    	<!--test name="org.test.AllTests"
+    		haltonfailure="no" todir="${junit.output.dir}">
+    		<formatter type="plain" />
+    		<formatter type="xml" />
+    	</test-->
+
+    	<junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="test.AllTests" todir="${junit.output.dir}"/>
+            <test name="org.test.AllTests" todir="${junit.output.dir}"/>
             <classpath refid="agileiss_pos.classpath"/>
         </junit>
     </target>
     <target name="agileiss_pos">
         <mkdir dir="${junit.output.dir}"/>
-        <!--junit fork="yes" printsummary="withOutAndErr">
+        <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="test.AllTests" todir="${junit.output.dir}"/>
             <test name="test.agileiss_posTest" todir="${junit.output.dir}"/>
             <classpath refid="agileiss_pos.classpath"/>
-        </junit-->
+        </junit>
     </target>
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
