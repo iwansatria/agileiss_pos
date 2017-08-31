@@ -5,6 +5,7 @@ public class Product {
 	private int id ;
 	private String name ;
 	private double price;
+	private double finalPrice;
 	
 	public Product(int id, String name, double price) {
 		super();
@@ -36,6 +37,13 @@ public class Product {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	
+
+	public double getFinalPrice() {
+		return finalPrice;
+	}
+
+	public void setFinalPrice(double finalPrice) {
+		this.finalPrice = finalPrice;
+	}
 	
 }

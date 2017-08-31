@@ -1,12 +1,10 @@
 package org.test;
 
-import static org.junit.Assert.*;
-
-import javax.xml.bind.SchemaOutputResolver;
+import static org.junit.Assert.assertEquals;
 
 import org.dev.DiscountEngine;
+import org.dev.DiscountScenarioThirtyPercentOffAllItems;
 import org.dev.Product;
-import org.dev.ProductRepository;
 import org.dev.ShoppingCart;
 import org.junit.Test;
 
@@ -34,14 +32,14 @@ public class ShoppingCartTest {
 	public void testApplyDiscounts () 	{
 		
 		//setup
-		ShoppingCart cart = new ShoppingCart();
+		ShoppingCart cart = new ShoppingCart(new DiscountScenarioThirtyPercentOffAllItems());
 		cart.addToCart(new Product(1, "aaa", 10));
 		
 		//exercise
 		DiscountEngine.apply(cart);
 		
 		//check
-		assertEquals(cart.getCart().get(0).getPrice(), 10*0.7, 0.001);
+		assertEquals(cart.getCart().get(0).getFinalPrice(), 10*0.7, 0.001);
 		
 	}
 
@@ -49,7 +47,7 @@ public class ShoppingCartTest {
 	public void testCalculateAfterApplyDiscounts () 	{
 		
 		//setup
-		ShoppingCart cart = new ShoppingCart();
+		ShoppingCart cart = new ShoppingCart(new DiscountScenarioThirtyPercentOffAllItems());
 		cart.addToCart(new Product(1, "aaa", 10));
 		cart.addToCart(new Product(2, "aaa", 10));
 		

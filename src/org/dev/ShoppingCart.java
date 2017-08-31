@@ -6,9 +6,21 @@ import java.util.List;
 public class ShoppingCart {
 	
 	private List<Product> cart =new ArrayList<>();
+	private DiscountScenario ds;
+	
+	public ShoppingCart() {
+		// Do nothing.
+	}
+	
+	public ShoppingCart(DiscountScenario ds) {
+		this.ds = ds;
+	}
 	
 	public void addToCart (Product product){
 		cart.add(product);
+		if (ds!=null) {
+			ds.apply(this);
+		}
 	}
 	
 	public List<Product> getCart() {
@@ -26,7 +38,7 @@ public class ShoppingCart {
 	public double calculateTotalPrice() {
 		double total = 0;
 		for(Product product: cart){
-			total += product.getPrice();
+			total += product.getFinalPrice();
 		}
 		return total;
 	}

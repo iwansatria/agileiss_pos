@@ -8,7 +8,7 @@ public class DiscountScenarioThirtyPercentOffAllItems extends DiscountScenario {
 		
 		for(Product product : givenCart.getCart())
 		{
-			product.setPrice(product.getPrice() * 0.70);
+			product.setFinalPrice(product.getPrice() * 0.70);
 		}
 		
 	}
