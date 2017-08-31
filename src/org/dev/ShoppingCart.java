@@ -23,4 +23,11 @@ public class ShoppingCart {
 		return sb.toString();
 	}
 	
+	public double calculateTotalPrice() {
+		double total = 0;
+		for(Product product: cart){
+			total += product.getPrice();
+		}
+		return total;
+	}
 }
