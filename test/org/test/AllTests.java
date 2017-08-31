@@ -5,7 +5,7 @@ import org.junit.runners.Suite;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses({
-	  ProductRepositoryTest.class,
+	  ProductRepositoryTest.class,ShoppingCartTest.class,
 	})
 public class AllTests {
 }
