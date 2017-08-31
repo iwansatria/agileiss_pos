@@ -16,15 +16,15 @@ public class TestDiscountScenarioThirtyPercentOffAllItems {
 		
 		//setup
 		DiscountScenario ds = new DiscountScenarioThirtyPercentOffAllItems();
-		ShoppingCart shoppingCart = new ShoppingCart();
+		ShoppingCart cart = new ShoppingCart();
 		
-		shoppingCart.addToCart(new Product(0, "aaa", 10));
+		cart.addToCart(new Product(0, "aaa", 10));
 		
 		//exercise
-		ds.apply(shoppingCart);
+		ds.apply(cart);
 		
 		//check
-		assertEquals(shoppingCart.getCart().get(0).getPrice(), 10*0.7, 0.001);
+		assertEquals(cart.getCart().get(0).getPrice(), 10*0.7, 0.001);
 		
 	}
 
