@@ -40,4 +40,14 @@ public class ShoppingCart {
 		}
 		return total;
 	}
+	
+	public String generateStatement() {
+		StringBuilder sb = new StringBuilder();
+		for(int i=0; i<cart.size(); i++){
+			Product prod = cart.get(i);
+			sb.append(i+1).append(": ").append(prod.getName()).append(" ").append(prod.getFinalPrice());
+			sb.append("\n");
+		}
+		return sb.toString();
+	}
 }

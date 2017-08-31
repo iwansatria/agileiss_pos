@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="ISSCR3106" name="org.test.AllTests" skipped="0" tests="2" time="0.118" timestamp="2017-08-31T06:41:23">
+<testsuite errors="0" failures="0" hostname="ISSCR3106" name="org.test.AllTests" skipped="0" tests="5" time="0.119" timestamp="2017-08-31T07:43:30">
   <properties>
     <property name="java.vendor" value="Oracle Corporation" />
     <property name="sun.java.launcher" value="SUN_STANDARD" />
@@ -75,7 +75,7 @@
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit" />
     <property name="user.script" value="" />
     <property name="eclipse.pdebuild.scripts" value="/C:/eclipse/plugins/org.eclipse.pde.build_3.9.200.v20160204-0642/scripts/" />
-    <property name="target" value="1.6" />
+    <property name="target" value="1.7" />
     <property name="user.home" value="C:\Users\issuser" />
     <property name="env.ProgramData" value="C:\ProgramData" />
     <property name="env.VS140COMNTOOLS" value="C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\Tools\" />
@@ -91,7 +91,7 @@
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment" />
     <property name="ant.version" value="Apache Ant(TM) version 1.9.6 compiled on June 29 2015" />
     <property name="java.class.path" value="D:\Refactoring\project1\agileiss_pos\bin;D:\Refactoring\project1\agileiss_pos\lib\junit-4.11.jar;D:\Refactoring\project1\agileiss_pos\lib\hamcrest-core-1.3.jar;C:\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-launcher.jar;C:\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant.jar;C:\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit.jar;C:\eclipse\plugins\org.apache.ant_1.9.6.v201510161327\lib\ant-junit4.jar" />
-    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.test.AllTests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Refactoring\project1\agileiss_pos\junit\TEST-org.test.AllTests.xml crashfile=D:\Refactoring\project1\agileiss_pos\junitvmwatcher641423831146685476.properties propsfile=D:\Refactoring\project1\agileiss_pos\junit2712450722302595846.properties" />
+    <property name="sun.java.command" value="org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner org.test.AllTests skipNonTests=false filtertrace=true haltOnError=false haltOnFailure=false formatter=org.apache.tools.ant.taskdefs.optional.junit.OutErrSummaryJUnitResultFormatter showoutput=false outputtoformatters=true logfailedtests=true threadid=0 logtestlistenerevents=false formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,D:\Refactoring\project1\agileiss_pos\junit\TEST-org.test.AllTests.xml crashfile=D:\Refactoring\project1\agileiss_pos\junitvmwatcher3814568011665703926.properties propsfile=D:\Refactoring\project1\agileiss_pos\junit3219681389716015308.properties" />
     <property name="env.CAI_CAFT" value="C:\Program Files (x86)\CA\SC\CAM" />
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification" />
     <property name="env.windir" value="C:\windows" />
@@ -128,7 +128,7 @@
     <property name="env.USERNAME" value="issuser" />
     <property name="env.TISDIR" value="C:\Program Files (x86)\Rational\common" />
     <property name="env.SystemDrive" value="C:" />
-    <property name="source" value="1.6" />
+    <property name="source" value="1.7" />
     <property name="file.encoding" value="Cp1252" />
     <property name="env.USERDOMAIN" value="ISSCR3106" />
     <property name="java.specification.version" value="1.8" />
@@ -136,7 +136,10 @@
     <property name="env.PROCESSOR_LEVEL" value="6" />
   </properties>
   <testcase classname="org.test.ProductRepositoryTest" name="testAddOneProduct" time="0.003" />
-  <testcase classname="org.test.ShoppingCartTest" name="test" time="0.002" />
+  <testcase classname="org.test.ShoppingCartTest" name="testApplyDiscounts" time="0.003" />
+  <testcase classname="org.test.ShoppingCartTest" name="testCalculateAfterApplyDiscounts" time="0.0" />
+  <testcase classname="org.test.ShoppingCartTest" name="testCartSize" time="0.0" />
+  <testcase classname="org.test.ShoppingCartTest" name="testListDownProductInCart" time="0.0" />
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

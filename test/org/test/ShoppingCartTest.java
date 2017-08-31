@@ -45,7 +45,6 @@ public class ShoppingCartTest {
 
 	@Test
 	public void testCalculateAfterApplyDiscounts () 	{
-		
 		//setup
 		ShoppingCart cart = new ShoppingCart(new DiscountScenarioThirtyPercentOffAllItems());
 		cart.addToCart(new Product(1, "aaa", 10));
@@ -55,8 +54,23 @@ public class ShoppingCartTest {
 		DiscountEngine.apply(cart);
 		
 		//check
-//		assertEquals(cart.getCart().get(0).getPrice(), 10*0.7, 0.001);
 		assertEquals(cart.calculateTotalPrice(), 14, 0.001);
+	}
+
+	@Test
+	public void testGenerateStatement() 	{
+		//setup
+		ShoppingCart cart = new ShoppingCart(new DiscountScenarioThirtyPercentOffAllItems());
+		cart.addToCart(new Product(1, "aaa", 10));
+		cart.addToCart(new Product(2, "bbb", 20));
+		
+		//exercise
+		DiscountEngine.apply(cart);
+		
+		//check
+		String str = cart.generateStatement();
+		String expected = "1: aaa 7.0\n2: bbb 14.0\n";
+		assertEquals(expected, str);
 	}
 
 }
