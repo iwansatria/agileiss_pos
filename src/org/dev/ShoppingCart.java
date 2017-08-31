@@ -15,5 +15,12 @@ public class ShoppingCart {
 		return cart;
 	}
 	
+	public String listProductInCart(){
+		StringBuilder sb = new StringBuilder();
+		for(Product product: cart){
+			sb.append((product.getName()));
+		}
+		return sb.toString();
+	}
 	
 }
