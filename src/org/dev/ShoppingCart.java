@@ -6,7 +6,7 @@ import java.util.List;
 public class ShoppingCart {
 	
 	private List<Product> cart =new ArrayList<>();
-	private DiscountScenario ds;
+	private DiscountScenario ds = new DiscountScenarioDoNothing();
 	
 	public ShoppingCart() {
 		// Do nothing.
@@ -18,9 +18,7 @@ public class ShoppingCart {
 	
 	public void addToCart (Product product){
 		cart.add(product);
-		if (ds!=null) {
-			ds.apply(this);
-		}
+		ds.apply(this);
 	}
 	
 	public List<Product> getCart() {
